@@ -1,0 +1,13 @@
+{
+  "name": "Price Tracker",
+  "version": "1.0",
+  "description": "A price tracking application that allows subscribing to watch for price drops on shopping sites.",
+  "background": { "scripts": ["background/index.js"] },
+  "content_scripts": [
+    {
+      "js": ["content/index.js"],
+      "matches": ["https://*/*", "http://*/*"]
+    }
+  ],
+  "browser_action": { "default_popup": "pages/popup/index.html" }
+}
